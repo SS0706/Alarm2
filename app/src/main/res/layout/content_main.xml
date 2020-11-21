@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/another_colour"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <ImageView
+        android:id="@+id/charaImage"
+        android:layout_width="178dp"
+        android:layout_height="189dp"
+        android:layout_gravity="center"
+        android:src="@drawable/clockicon" />
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:text="You Snooze \nYou Lose"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <Button
+        android:id="@+id/buttonCreateAlarm"
+        android:text="Create a new alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/buttonAlarmsPage"
+        android:text="alarms page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/teal_700"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/buttonLeaderboard"
+        android:text="Check out the leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/some_colour"
+        android:layout_marginBottom="10dp"
+        />
+
+
+</LinearLayout>
