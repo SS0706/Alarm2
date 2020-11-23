@@ -8,4 +8,15 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+<!--    for CreateAlarmActivity-->
+    <string name="alarm_on">Alarm On</string>
+    <string name="alarm_off">Alarm Off</string>
+    <string name="alarm_status">Alarm Status</string>
+    <string-array name="game_array">
+        <item>Pick a game to stop the alarm!</item>
+        <item>Math</item>
+        <item>Visual</item>
+        <item>Steps</item>
+    </string-array>
+
 </resources>
