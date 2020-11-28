@@ -1,10 +1,8 @@
-package com.andeeni.alarmapp;
+package com.example.alarmproject;
 
-import android.app.AppComponentFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +19,7 @@ public class VisualGameActivity extends AppCompatActivity {
         oddImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(VisualGameActivity.this, "Congrats! You chose the correct image. Have a good day", Toast.LENGTH_LONG).show();
+                Toast.makeText(com.example.alarmproject.VisualGameActivity.this, "Congrats! You chose the correct image. Have a good day", Toast.LENGTH_LONG).show();
                 //call the offTheAlarm method to turn off the alarm
             }
         });
@@ -32,6 +30,5 @@ public class VisualGameActivity extends AppCompatActivity {
 
 
 
-
-    }
+    
 }
