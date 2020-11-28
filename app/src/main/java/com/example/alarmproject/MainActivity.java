@@ -136,6 +136,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        if(id == R.id.menu_choose_game){
+            Intent intent = new Intent( this, AlarmsPageActivity.class);
+            startActivity(intent);
+            return true;
+        }
 
 
         return super.onOptionsItemSelected(item);
