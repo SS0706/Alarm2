@@ -19,4 +19,9 @@
         android:orderInCategory="120"
         android:title="@string/check_out_leaderBoard"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_choose_game"
+        android:orderInCategory="120"
+        android:title="@string/choose_game"
+        app:showAsAction="never" />
 </menu>
