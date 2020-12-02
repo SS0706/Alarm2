@@ -36,8 +36,8 @@ public class RingtonePlayingService extends Service {
         NotificationManager notificationManager;
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "notify_001");
 
-//        CHANGE THIS TO GAME CLASS!!!!
-        Intent notifyIntent = new Intent(this, CreateAlarmActivity.class);
+        Intent notifyIntent = new Intent(this.getApplicationContext(), VisualGameActivity.class);
+
         // Set the Activity to start in a new, empty task
         notifyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                 | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -51,7 +51,7 @@ public class RingtonePlayingService extends Service {
         builder.setContentTitle("Time to wake up!");
         builder.setContentText("Click me");
         builder.setPriority(Notification.PRIORITY_MAX);
-
+        builder.setAutoCancel(true);
 
         notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
@@ -78,13 +78,15 @@ public class RingtonePlayingService extends Service {
         if (!this.isRunning && startId == 1) { //if no music playing AND user press 'alarm on'
             //create instance of MediaPlayer, start playing music
             media_song = MediaPlayer.create(this, R.raw.alarm_ringtone);
+            media_song.setLooping(true); //repeat alarm
             media_song.start();
+
+            this.isRunning = true;
+            this.startId = 0;
 
             //set notification call command
             notificationManager.notify(0, builder.build());
 
-            this.isRunning = true;
-            this.startId = 0;
         }else if (this.isRunning && startId==0){ //if music playing AND user press 'alarm off'
             media_song.stop();
             media_song.reset();

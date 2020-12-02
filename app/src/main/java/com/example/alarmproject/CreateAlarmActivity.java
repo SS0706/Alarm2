@@ -2,6 +2,7 @@ package com.example.alarmproject;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,14 +30,14 @@ public class CreateAlarmActivity extends AppCompatActivity implements AdapterVie
     Button alarm_on;
     Button alarm_off;
     PendingIntent pending_intent;
+    Context context;
     int choose_game;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_alarms_sub);
-        Log.i(TAG, "onCreate");
-
+        this.context=this;
 //        Intent intent = new Intent(CreateAlarmActivity.this, MainActivity.class);
 
         alarm_manager=(AlarmManager) getSystemService(ALARM_SERVICE);
@@ -114,7 +115,6 @@ public class CreateAlarmActivity extends AppCompatActivity implements AdapterVie
                 intent_alarm.putExtra("extra","alarm_off");
                 //put extra int into intent_alarm
                 //prevent crashes in Null Pointer Exception
-                intent_alarm.putExtra("game_id",choose_game);
 
                 //stop ringtone
                 sendBroadcast(intent_alarm);

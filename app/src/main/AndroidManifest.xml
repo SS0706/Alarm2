@@ -34,7 +34,7 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".LeaderboardActivity"
             android:parentActivityName=".MainActivity"></activity>
-
+        <activity android:name=".VisualGameActivity" />
         <receiver android:name=".AlarmReceiver"/>
 
         <service android:name=".RingtonePlayingService"
